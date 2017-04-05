@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB1BB4831E83BD8F000B8DD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1BB4821E83BD8F000B8DD0 /* main.m */; };
+		EB1BB4861E83BD8F000B8DD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1BB4851E83BD8F000B8DD0 /* AppDelegate.m */; };
+		EB1BB48C1E83BD8F000B8DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1BB48A1E83BD8F000B8DD0 /* Main.storyboard */; };
+		EB1BB48E1E83BD8F000B8DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1BB48D1E83BD8F000B8DD0 /* Assets.xcassets */; };
+		EB1BB4911E83BD8F000B8DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1BB48F1E83BD8F000B8DD0 /* LaunchScreen.storyboard */; };
+		EB1BB4A31E83BEF2000B8DD0 /* GLTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1BB4A21E83BEF2000B8DD0 /* GLTransitionManager.m */; };
+		EB41A1721E84A91600C1358A /* GLTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB41A1711E84A91600C1358A /* GLTransitionAnimation.m */; };
+		EB41A1751E84AA6C00C1358A /* GLInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB41A1741E84AA6C00C1358A /* GLInteractiveTransition.m */; };
+		EB41A1781E84AC4200C1358A /* UIViewController+GLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EB41A1771E84AC4200C1358A /* UIViewController+GLTransition.m */; };
+		EB41A17B1E84C28B00C1358A /* GLCircleSpreadAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB41A17A1E84C28B00C1358A /* GLCircleSpreadAnimation.m */; };
+		EBAA46921E8CFF1F00005E42 /* OpenDoorFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA46911E8CFF1F00005E42 /* OpenDoorFromViewController.m */; };
+		EBAA46951E8CFF3100005E42 /* OpenDoorToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA46941E8CFF3100005E42 /* OpenDoorToViewController.m */; };
+		EBAA46981E8D020100005E42 /* GLOpenDoorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA46971E8D020100005E42 /* GLOpenDoorAnimation.m */; };
+		EBAA46A01E8E3CB300005E42 /* GLMiddlePageAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA469F1E8E3CB300005E42 /* GLMiddlePageAnimation.m */; };
+		EBAA46A41E8E45E000005E42 /* MiddlePageFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA46A31E8E45E000005E42 /* MiddlePageFromViewController.m */; };
+		EBAA46A71E8E45EF00005E42 /* MiddlePageToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA46A61E8E45EF00005E42 /* MiddlePageToViewController.m */; };
+		EBABC5351E89054600B218C1 /* CircleSpreadToController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABC5321E89054600B218C1 /* CircleSpreadToController.m */; };
+		EBABC5361E89054600B218C1 /* CircleSpreadFromController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABC5341E89054600B218C1 /* CircleSpreadFromController.m */; };
+		EBABC5391E8906DF00B218C1 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABC5381E8906DF00B218C1 /* TableViewController.m */; };
+		EBABC53D1E890BD400B218C1 /* CircleRectSpreadFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABC53C1E890BD400B218C1 /* CircleRectSpreadFromViewController.m */; };
+		EBABC5401E890BE500B218C1 /* CircleRectSpreadToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABC53F1E890BE500B218C1 /* CircleRectSpreadToViewController.m */; };
+		EBABC5431E890C3400B218C1 /* GLCircleRectSpreadAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABC5421E890C3400B218C1 /* GLCircleRectSpreadAnimation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EB1BB47E1E83BD8F000B8DD0 /* GLTransitionAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLTransitionAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1BB4821E83BD8F000B8DD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB1BB4841E83BD8F000B8DD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB1BB4851E83BD8F000B8DD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB1BB48B1E83BD8F000B8DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB1BB48D1E83BD8F000B8DD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB1BB4901E83BD8F000B8DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB1BB4921E83BD8F000B8DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB1BB4A11E83BEF2000B8DD0 /* GLTransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTransitionManager.h; sourceTree = "<group>"; };
+		EB1BB4A21E83BEF2000B8DD0 /* GLTransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTransitionManager.m; sourceTree = "<group>"; };
+		EB41A1701E84A91600C1358A /* GLTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTransitionAnimation.h; sourceTree = "<group>"; };
+		EB41A1711E84A91600C1358A /* GLTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTransitionAnimation.m; sourceTree = "<group>"; };
+		EB41A1731E84AA6C00C1358A /* GLInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLInteractiveTransition.h; sourceTree = "<group>"; };
+		EB41A1741E84AA6C00C1358A /* GLInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLInteractiveTransition.m; sourceTree = "<group>"; };
+		EB41A1761E84AC4200C1358A /* UIViewController+GLTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GLTransition.h"; sourceTree = "<group>"; };
+		EB41A1771E84AC4200C1358A /* UIViewController+GLTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GLTransition.m"; sourceTree = "<group>"; };
+		EB41A1791E84C28B00C1358A /* GLCircleSpreadAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCircleSpreadAnimation.h; sourceTree = "<group>"; };
+		EB41A17A1E84C28B00C1358A /* GLCircleSpreadAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLCircleSpreadAnimation.m; sourceTree = "<group>"; };
+		EBAA46841E8B988C00005E42 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EBAA46901E8CFF1F00005E42 /* OpenDoorFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenDoorFromViewController.h; sourceTree = "<group>"; };
+		EBAA46911E8CFF1F00005E42 /* OpenDoorFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenDoorFromViewController.m; sourceTree = "<group>"; };
+		EBAA46931E8CFF3100005E42 /* OpenDoorToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenDoorToViewController.h; sourceTree = "<group>"; };
+		EBAA46941E8CFF3100005E42 /* OpenDoorToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenDoorToViewController.m; sourceTree = "<group>"; };
+		EBAA46961E8D020100005E42 /* GLOpenDoorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLOpenDoorAnimation.h; sourceTree = "<group>"; };
+		EBAA46971E8D020100005E42 /* GLOpenDoorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLOpenDoorAnimation.m; sourceTree = "<group>"; };
+		EBAA469E1E8E3CB300005E42 /* GLMiddlePageAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMiddlePageAnimation.h; sourceTree = "<group>"; };
+		EBAA469F1E8E3CB300005E42 /* GLMiddlePageAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMiddlePageAnimation.m; sourceTree = "<group>"; };
+		EBAA46A21E8E45E000005E42 /* MiddlePageFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiddlePageFromViewController.h; sourceTree = "<group>"; };
+		EBAA46A31E8E45E000005E42 /* MiddlePageFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiddlePageFromViewController.m; sourceTree = "<group>"; };
+		EBAA46A51E8E45EF00005E42 /* MiddlePageToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiddlePageToViewController.h; sourceTree = "<group>"; };
+		EBAA46A61E8E45EF00005E42 /* MiddlePageToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiddlePageToViewController.m; sourceTree = "<group>"; };
+		EBABC5311E89054600B218C1 /* CircleSpreadToController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpreadToController.h; sourceTree = "<group>"; };
+		EBABC5321E89054600B218C1 /* CircleSpreadToController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSpreadToController.m; sourceTree = "<group>"; };
+		EBABC5331E89054600B218C1 /* CircleSpreadFromController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpreadFromController.h; sourceTree = "<group>"; };
+		EBABC5341E89054600B218C1 /* CircleSpreadFromController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSpreadFromController.m; sourceTree = "<group>"; };
+		EBABC5371E8906DF00B218C1 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		EBABC5381E8906DF00B218C1 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		EBABC53B1E890BD400B218C1 /* CircleRectSpreadFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRectSpreadFromViewController.h; sourceTree = "<group>"; };
+		EBABC53C1E890BD400B218C1 /* CircleRectSpreadFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRectSpreadFromViewController.m; sourceTree = "<group>"; };
+		EBABC53E1E890BE500B218C1 /* CircleRectSpreadToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRectSpreadToViewController.h; sourceTree = "<group>"; };
+		EBABC53F1E890BE500B218C1 /* CircleRectSpreadToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRectSpreadToViewController.m; sourceTree = "<group>"; };
+		EBABC5411E890C3400B218C1 /* GLCircleRectSpreadAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCircleRectSpreadAnimation.h; sourceTree = "<group>"; };
+		EBABC5421E890C3400B218C1 /* GLCircleRectSpreadAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLCircleRectSpreadAnimation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB1BB47B1E83BD8F000B8DD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB1BB4751E83BD8F000B8DD0 = {
+			isa = PBXGroup;
+			children = (
+				EB1BB4801E83BD8F000B8DD0 /* GLTransitionAnimationDemo */,
+				EB1BB47F1E83BD8F000B8DD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB1BB47F1E83BD8F000B8DD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BB47E1E83BD8F000B8DD0 /* GLTransitionAnimationDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB1BB4801E83BD8F000B8DD0 /* GLTransitionAnimationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BB4841E83BD8F000B8DD0 /* AppDelegate.h */,
+				EB1BB4851E83BD8F000B8DD0 /* AppDelegate.m */,
+				EB1BB49A1E83BE11000B8DD0 /* ViewController */,
+				EB1BB4981E83BE11000B8DD0 /* GLTransitionAnimation */,
+				EB1BB48A1E83BD8F000B8DD0 /* Main.storyboard */,
+				EB1BB48D1E83BD8F000B8DD0 /* Assets.xcassets */,
+				EBAA46841E8B988C00005E42 /* PrefixHeader.pch */,
+				EB1BB48F1E83BD8F000B8DD0 /* LaunchScreen.storyboard */,
+				EB1BB4921E83BD8F000B8DD0 /* Info.plist */,
+				EB1BB4811E83BD8F000B8DD0 /* Supporting Files */,
+			);
+			path = GLTransitionAnimationDemo;
+			sourceTree = "<group>";
+		};
+		EB1BB4811E83BD8F000B8DD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BB4821E83BD8F000B8DD0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB1BB4981E83BE11000B8DD0 /* GLTransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BB4991E83BE11000B8DD0 /* GLAnimation */,
+				EB1BB4A11E83BEF2000B8DD0 /* GLTransitionManager.h */,
+				EB1BB4A21E83BEF2000B8DD0 /* GLTransitionManager.m */,
+				EB41A1701E84A91600C1358A /* GLTransitionAnimation.h */,
+				EB41A1711E84A91600C1358A /* GLTransitionAnimation.m */,
+				EB41A1731E84AA6C00C1358A /* GLInteractiveTransition.h */,
+				EB41A1741E84AA6C00C1358A /* GLInteractiveTransition.m */,
+				EB41A1761E84AC4200C1358A /* UIViewController+GLTransition.h */,
+				EB41A1771E84AC4200C1358A /* UIViewController+GLTransition.m */,
+			);
+			path = GLTransitionAnimation;
+			sourceTree = "<group>";
+		};
+		EB1BB4991E83BE11000B8DD0 /* GLAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				EB41A1791E84C28B00C1358A /* GLCircleSpreadAnimation.h */,
+				EB41A17A1E84C28B00C1358A /* GLCircleSpreadAnimation.m */,
+				EBABC5411E890C3400B218C1 /* GLCircleRectSpreadAnimation.h */,
+				EBABC5421E890C3400B218C1 /* GLCircleRectSpreadAnimation.m */,
+				EBAA46961E8D020100005E42 /* GLOpenDoorAnimation.h */,
+				EBAA46971E8D020100005E42 /* GLOpenDoorAnimation.m */,
+				EBAA469E1E8E3CB300005E42 /* GLMiddlePageAnimation.h */,
+				EBAA469F1E8E3CB300005E42 /* GLMiddlePageAnimation.m */,
+			);
+			path = GLAnimation;
+			sourceTree = "<group>";
+		};
+		EB1BB49A1E83BE11000B8DD0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EBABC5371E8906DF00B218C1 /* TableViewController.h */,
+				EBABC5381E8906DF00B218C1 /* TableViewController.m */,
+				EBAA46A11E8E459B00005E42 /* MiddlePageVc */,
+				EBAA468C1E8CFEEF00005E42 /* OpenDoorVc */,
+				EBABC53A1E890BB100B218C1 /* CircleRectSpreadVc */,
+				EBABC5301E89054600B218C1 /* CircleSpreadVc */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EBAA468C1E8CFEEF00005E42 /* OpenDoorVc */ = {
+			isa = PBXGroup;
+			children = (
+				EBAA46901E8CFF1F00005E42 /* OpenDoorFromViewController.h */,
+				EBAA46911E8CFF1F00005E42 /* OpenDoorFromViewController.m */,
+				EBAA46931E8CFF3100005E42 /* OpenDoorToViewController.h */,
+				EBAA46941E8CFF3100005E42 /* OpenDoorToViewController.m */,
+			);
+			path = OpenDoorVc;
+			sourceTree = "<group>";
+		};
+		EBAA46A11E8E459B00005E42 /* MiddlePageVc */ = {
+			isa = PBXGroup;
+			children = (
+				EBAA46A21E8E45E000005E42 /* MiddlePageFromViewController.h */,
+				EBAA46A31E8E45E000005E42 /* MiddlePageFromViewController.m */,
+				EBAA46A51E8E45EF00005E42 /* MiddlePageToViewController.h */,
+				EBAA46A61E8E45EF00005E42 /* MiddlePageToViewController.m */,
+			);
+			path = MiddlePageVc;
+			sourceTree = "<group>";
+		};
+		EBABC5301E89054600B218C1 /* CircleSpreadVc */ = {
+			isa = PBXGroup;
+			children = (
+				EBABC5331E89054600B218C1 /* CircleSpreadFromController.h */,
+				EBABC5341E89054600B218C1 /* CircleSpreadFromController.m */,
+				EBABC5311E89054600B218C1 /* CircleSpreadToController.h */,
+				EBABC5321E89054600B218C1 /* CircleSpreadToController.m */,
+			);
+			path = CircleSpreadVc;
+			sourceTree = "<group>";
+		};
+		EBABC53A1E890BB100B218C1 /* CircleRectSpreadVc */ = {
+			isa = PBXGroup;
+			children = (
+				EBABC53B1E890BD400B218C1 /* CircleRectSpreadFromViewController.h */,
+				EBABC53C1E890BD400B218C1 /* CircleRectSpreadFromViewController.m */,
+				EBABC53E1E890BE500B218C1 /* CircleRectSpreadToViewController.h */,
+				EBABC53F1E890BE500B218C1 /* CircleRectSpreadToViewController.m */,
+			);
+			path = CircleRectSpreadVc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB1BB47D1E83BD8F000B8DD0 /* GLTransitionAnimationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB1BB4951E83BD8F000B8DD0 /* Build configuration list for PBXNativeTarget "GLTransitionAnimationDemo" */;
+			buildPhases = (
+				EB1BB47A1E83BD8F000B8DD0 /* Sources */,
+				EB1BB47B1E83BD8F000B8DD0 /* Frameworks */,
+				EB1BB47C1E83BD8F000B8DD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLTransitionAnimationDemo;
+			productName = GLTransitionAnimationDemo;
+			productReference = EB1BB47E1E83BD8F000B8DD0 /* GLTransitionAnimationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB1BB4761E83BD8F000B8DD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "高磊";
+				TargetAttributes = {
+					EB1BB47D1E83BD8F000B8DD0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EB1BB4791E83BD8F000B8DD0 /* Build configuration list for PBXProject "GLTransitionAnimationDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB1BB4751E83BD8F000B8DD0;
+			productRefGroup = EB1BB47F1E83BD8F000B8DD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB1BB47D1E83BD8F000B8DD0 /* GLTransitionAnimationDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB1BB47C1E83BD8F000B8DD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1BB4911E83BD8F000B8DD0 /* LaunchScreen.storyboard in Resources */,
+				EB1BB48E1E83BD8F000B8DD0 /* Assets.xcassets in Resources */,
+				EB1BB48C1E83BD8F000B8DD0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB1BB47A1E83BD8F000B8DD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBAA46A41E8E45E000005E42 /* MiddlePageFromViewController.m in Sources */,
+				EBABC5361E89054600B218C1 /* CircleSpreadFromController.m in Sources */,
+				EB41A1781E84AC4200C1358A /* UIViewController+GLTransition.m in Sources */,
+				EB1BB4A31E83BEF2000B8DD0 /* GLTransitionManager.m in Sources */,
+				EBABC5391E8906DF00B218C1 /* TableViewController.m in Sources */,
+				EBAA46A01E8E3CB300005E42 /* GLMiddlePageAnimation.m in Sources */,
+				EBABC53D1E890BD400B218C1 /* CircleRectSpreadFromViewController.m in Sources */,
+				EB41A1751E84AA6C00C1358A /* GLInteractiveTransition.m in Sources */,
+				EBAA46A71E8E45EF00005E42 /* MiddlePageToViewController.m in Sources */,
+				EBABC5401E890BE500B218C1 /* CircleRectSpreadToViewController.m in Sources */,
+				EB1BB4861E83BD8F000B8DD0 /* AppDelegate.m in Sources */,
+				EBABC5431E890C3400B218C1 /* GLCircleRectSpreadAnimation.m in Sources */,
+				EBAA46981E8D020100005E42 /* GLOpenDoorAnimation.m in Sources */,
+				EBABC5351E89054600B218C1 /* CircleSpreadToController.m in Sources */,
+				EBAA46951E8CFF3100005E42 /* OpenDoorToViewController.m in Sources */,
+				EB1BB4831E83BD8F000B8DD0 /* main.m in Sources */,
+				EB41A17B1E84C28B00C1358A /* GLCircleSpreadAnimation.m in Sources */,
+				EBAA46921E8CFF1F00005E42 /* OpenDoorFromViewController.m in Sources */,
+				EB41A1721E84A91600C1358A /* GLTransitionAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB1BB48A1E83BD8F000B8DD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB1BB48B1E83BD8F000B8DD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB1BB48F1E83BD8F000B8DD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB1BB4901E83BD8F000B8DD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB1BB4931E83BD8F000B8DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EB1BB4941E83BD8F000B8DD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB1BB4961E83BD8F000B8DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GLTransitionAnimationDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = GLTransitionAnimationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gao.GLTransitionAnimationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EB1BB4971E83BD8F000B8DD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GLTransitionAnimationDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = GLTransitionAnimationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gao.GLTransitionAnimationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB1BB4791E83BD8F000B8DD0 /* Build configuration list for PBXProject "GLTransitionAnimationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1BB4931E83BD8F000B8DD0 /* Debug */,
+				EB1BB4941E83BD8F000B8DD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB1BB4951E83BD8F000B8DD0 /* Build configuration list for PBXNativeTarget "GLTransitionAnimationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1BB4961E83BD8F000B8DD0 /* Debug */,
+				EB1BB4971E83BD8F000B8DD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB1BB4761E83BD8F000B8DD0 /* Project object */;
+}
