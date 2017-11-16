@@ -4,7 +4,7 @@ iOS 自定义转场动画
 
 ![开门效果.gif](http://upload-images.jianshu.io/upload_images/2525768-3de3520ec46cfa0a.gif?imageMogr2/auto-orient/strip)
 
-#####前记
+##### 前记
 想研究自定义转场动画很久了，时间就像海绵，挤一挤还是有的，花了差不多有10天的时间，终于对转场动画了解了一点。自从`iOS 7`以后，我们就可以自定义转场动画，实现我们想要的效果，在这之前，我们先来看一张图，大概了解下，需要知道些什么
 
 
@@ -19,7 +19,7 @@ iOS 自定义转场动画
 
 由于`push`动画组需要配合`navigationController`来使用，所以上图中的`UINavigationControllerDelegate`肯定是我们需要的类
 
-######UINavigationControllerDelegate
+###### UINavigationControllerDelegate
 先来看看其中需要用到的函数
 ```
 - (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
@@ -35,7 +35,7 @@ iOS 自定义转场动画
 第二个函数返回的值是一个`id <UIViewControllerAnimatedTransitioning>`值
 那么我们就先从这两个返回值入手，来看下两个函数的作用
 
-######UIViewControllerInteractiveTransitioning 、UIPercentDrivenInteractiveTransition
+###### UIViewControllerInteractiveTransitioning 、UIPercentDrivenInteractiveTransition
 这两个类又是干什么的呢？`UIPercentDrivenInteractiveTransition`遵守协议`UIViewControllerInteractiveTransitioning`,通过查阅资料了解到，`UIPercentDrivenInteractiveTransition`这个类的对象会根据我们的手势，来决定我们的自定义过渡的完成度，也就是这两个其实是和手势交互相关联的，自然而然我们就想到了`iOS 7`引进的侧滑手势，对，就是侧滑手势，说到这里，我就顺带介绍一个类，`UIScreenEdgePanGestureRecognizer`，手势侧滑的类，具体怎么使用，后面我会陆续讲到。
 
 涉及函数
@@ -48,7 +48,7 @@ iOS 自定义转场动画
 - (void)finishInteractiveTransition;
 ```
 
-######UIViewControllerAnimatedTransitioning
+###### UIViewControllerAnimatedTransitioning
 在这个类中，我们又看到了两个函数
 ```
 //转场时间
@@ -59,7 +59,7 @@ iOS 自定义转场动画
 其中又涉及到一个新的类`UIViewControllerContextTransitioning`，那么这个又是干什么的呢？我们等下再来了解，先来谈谈第一个函数`transitionDuration`，从返回值我们可以猜测出这是和时间有关的，没错，这就是我们自定义转场动画所需要的时间
 那么下面我们就来看看`UIViewControllerContextTransitioning`
 
-######UIViewControllerContextTransitioning
+###### UIViewControllerContextTransitioning
 这个类就是我们自定义转场动画所需要的核心，即转场动画的上下文，定义了转场时需要的元素，比如在转场过程中所参与的视图控制器和视图的相关属性
 ```
 //转场动画的容器
@@ -88,7 +88,7 @@ iOS 自定义转场动画
 ```
 到此，我们还有一个类没有了解，那就是`UIViewControllerTransitioningDelegate`有了前面的分析，我们可以很好的理解
 
-######UIViewControllerTransitioningDelegate
+###### UIViewControllerTransitioningDelegate
 主要是针对`present`和`dismiss`动画的转场
 ```
 //非手势转场交互 for present
@@ -114,8 +114,8 @@ iOS 自定义转场动画
 这些动画都比较简单，相信许多大神都很清楚，还望见谅，下面我就对每一种进行分析分析，在分析动画之前，先来看看怎么将上面的各个类进行封装起来，使用更方便，这里不得不感谢很久之前看到的一篇文章，从他的[文章](http://www.cocoachina.com/ios/20160629/16856.html)中收获非常大。
 
 在学习转场动画的时候，虽然对所有类的关系有了一定了解，但是封装的时候，完全没有想到还有这么好的思路，确实是学习了。下面我们就一起来看看封装思路。
-#####封装思路
-######1. 新建一个综合管理转场动画的类
+##### 封装思路
+###### 1. 新建一个综合管理转场动画的类
 作用：主要是管理转场所需要的一些设置，诸如转场时间和转场的实现（主要是在子类中进行实现，分离开来），用户在自定义转场动画的时候，只需要继承该类并重写父类方法就可以
 类名：`GLTransitionManager`，需要准守的协议有`<UINavigationControllerDelegate,UIViewControllerTransitioningDelegate>`
 通过这样，就可以将`present`和`push`动画相关的操作在该类中进行管理
@@ -145,7 +145,7 @@ iOS 自定义转场动画
 ```
 相信大家也看到了在入场和退场动画中都有`(id<UIViewControllerContextTransitioning>) contextTransition `这么一个参数，通过该参数，我们可以获取转场动画的相关`vc`和其他信息，进行转场动画的实现，即我们在自定义转场动画的时候，只需要重写该两个方法就可以，通过`contextTransition`来实现动画，而`<UIViewControllerContextTransitioning>`又在`UIViewControllerAnimatedTransitioning`协议的方法`- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext`中涉及到，于是我又新建了一个准守协议`UIViewControllerAnimatedTransitioning`的类`GLTransitionAnimation`，也就是下面我们将的类
 
-######2.转场动画配置及实现类
+###### 2.转场动画配置及实现类
 作用：虽然是配置和实现类，但是在该类中并没有进行实现，这里也正是之前那个博主的高明之处，至少我是这么认为的。在该类中，我们用`block`的传值方法将其传入到我们的管理类中，也就是`GLTransitionManager `
 
 `GLTransitionAnimation.h`文件
@@ -257,7 +257,7 @@ typedef void(^GLTransitionAnimationBlock)(id <UIViewControllerContextTransitioni
 ```
 在这两个地方使用后，我们差不多就完成了一半了，那还一部分呢？那就是我们的手势滑动，下面我们就来看看手势滑动。
 
-######3.手势交互管理类
+###### 3.手势交互管理类
 
 作用：主要通过侧滑手势来管理交互，在iOS 7后引入新的类`UIPercentDrivenInteractiveTransition`，该类的对象会根据我们的手势，来决定我们的自定义过渡的完成度，所以此次我采用继承的方式，然后在继承的类中加入滑动手势类，这里加入的是侧滑手势类`UIScreenEdgePanGestureRecognizer`，这个类也就是我定义的`GLInteractiveTransition`类
 
@@ -399,7 +399,7 @@ typedef NS_ENUM(NSInteger,GLEdgePanGestureDirection) {
 ```
 手势交互管理类的核心代码差不多就这么多，下面我们看看怎么使用
 
-######4.`UIViewController + GLTransition`
+###### 4.`UIViewController + GLTransition`
 
 为了和系统的转场动画的函数区分开来，这里我新建了一个`UIViewController`的`category`类`UIViewController + GLTransition`，在其中定义了四个函数，分别如下
 ```
@@ -607,8 +607,8 @@ objc_setAssociatedObject(viewController, &kAnimationKey, transitionManager, OBJC
 
 文章有点长，希望大家能够理解，因为后面还有。。。。
 
-#####几个动画的具体实现
-######1、开门动画
+##### 几个动画的具体实现
+###### 1、开门动画
 
 由于我们已经有了基类``，所以当我们需要实现什么动画的时候，只需要集成该类就可以了
 
@@ -703,7 +703,7 @@ objc_setAssociatedObject(viewController, &kAnimationKey, transitionManager, OBJC
 }
 ```
 `setBackAnimation`动画和上面的大同小异，就不再详细说明，文章后面有`demo`地址，大家可以看看。
-######2、圆圈逐渐放大转场动画
+###### 2、圆圈逐渐放大转场动画
 
 在做动画之前，我们先要了解其大概原理
 这里我简单的做了个草图
@@ -761,7 +761,7 @@ objc_setAssociatedObject(viewController, &kAnimationKey, transitionManager, OBJC
 ```
 由于代码中有比较详细的说明，所以这里就不再详细说明，`setBackAnimation`也大同小异
 
-######3、圆圈和目标vc共同缩放转场动画
+###### 3、圆圈和目标vc共同缩放转场动画
 
 这个比较简单，主要是利用`UIView`的缩放进行的，由于目标`vc`的上角和圆是相切的，所以，这里我们可以先假设目标`vc`处于正常状态，然后再跟进小圆的中心，画一个大圆，让其和目标`vc`一起缩放就是。这里留了一个缺陷，那就是不支持侧滑，因为我是用目标`vc`进行缩放的，而没有截图，大家可以试试。
 其实现大概为
@@ -821,7 +821,7 @@ objc_setAssociatedObject(viewController, &kAnimationKey, transitionManager, OBJC
 ```
 `setBackAnimation`也大同小异，就不再说明
 
-######4、翻书效果
+###### 4、翻书效果
 
 这个还是花了些时间，主要不在思想上，而是在翻书有个阴影效果哪里，等下我会讲到。先说说思路，主要还是通过截图来实现。首先需要截当前`vc`的部分，如果向左滑则截右边，向右则截左，然后还需要截目标`vc`的两部分图，分别加到`containerView`上，假如现在向左翻，那么就要将目标`vc`的左边截图加到`containerView`的左边并且隐藏起来，让其绕`y`轴旋转`M_PI_2`，就是直插屏幕的样子，那么目标`vc`的右边截图就需要放到当前`vc`的下面，这样当当前`vc`在滑动的时候，我们就能看到下面的图了。当当前`vc`绕`y`轴旋转`-M_PI_2`的时候，目标`vc`的左边截图显示出来，并恢复原状，完成整副动画。
 需要注意的是，截图在绕`y`轴旋转的时候，因为我们的`layer`的默认`anchorPoint`为`(0.5,0.5)`，所以需要改变`anchorPoint`的只，否则就绕中心在旋转了。
